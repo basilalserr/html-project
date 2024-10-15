@@ -217,6 +217,73 @@
 
     <hr>
 
+    <h2> Quotes </h2>
 
+    <h3 dir="rtl">مفهوم الإقتباس: </h3>
+    <pre dir="rtl">
+    النص المقتبس ( Quoted text ) يقصد به أن النص الموضوع في الصفحة تم نقله من مصدر آخر.
+    عادةً ما يتم عرض النص المقتبس بشكل مختلف قليلاً عن باقي النص الموجود في الصفحة بهدف إعلام القارئ بأنه منقول من مصدر آخر و لحفظ حقوق المصدر الذي نقل الكلام منه.
+    في هذا الدرس سنتعرف على الوسوم المخصصة لعرض إقتباسات في الصفحة.
+    </pre>
+
+    <h3 dir="rtl">عرض النص المقتبس بداخل بلوك:</h3>
+    <pre dir="rtl">
+    إذا أردت العرض النص مقتبس على سطر منفرد مع عرض هامش حوله من كل الجهات، يمكنك وضع النص بداخل <code>&lt;blockquote&gt;</code> <code>&lt;/blockquote&gt;</code>.
+
+    في المثال التالي قمنا بعرض إقتباس باستخدام <code>&lt;blockquote&gt;</code> بدون ذكر الموقع الذي جلبنا الإقتباس منه.
+    </pre>
+    <blockquote>
+    In 1980, physicist Tim Berners-Lee, a contractor at CERN, proposed and prototyped 
+    ENQUIRE, a system for CERN researchers to use and share documents. In 1989, Berners-Lee 
+    wrote a memo proposing an Internet-based hypertext system.
+    </blockquote>
+    <pre dir = "rtl">
+    إذا كان الإقتباس الموضوع في الصفحة منسوخ من موقع آخر، قم بذكر رابط الموقع الذي نسخت الإقتباس منه بداخل الخاصية <code>cite</code> التي يملكها الوسم <code>&lt;blockquote&gt;</code> 
+    لأن هذا الأمر سيجعل الموقع المقتبس منه ذو أهمية أكثر بالنسبة لمحركات البحث و بالتالي تكون تفيد الموقع الذي نسخت الإقتباس منه.
+    </pre>
+    <blockquote cite="https://en.wikipedia.org/wiki/HTML">
+    In 1980, physicist Tim Berners-Lee, a contractor at CERN, proposed and prototyped 
+    ENQUIRE, a system for CERN researchers to use and share documents. In 1989, Berners-Lee 
+    wrote a memo proposing an Internet-based hypertext system.
+    </blockquote>
+
+    <h3 dir="rtl">عرض النص المقتبس بين " "</h3>
+    <pre dir="rtl">
+    إذا أردت عرض النص المقتبس بين " " يمكنك وضعه بداخل <code>&lt;q&gt;</code> <code>&lt;/q&gt;</code>.
+    إستخدام الوسم <code>&lt;q&gt;</code> <code>&lt;/q&gt;</code> بدلاً من كتابة " " بشكل مباشر يُعد خيار أفضل حيث أنه يمكن تخصيص طريقة عرض الوسم بواسطة CSS و عندها يمكن تطبيق التصميم الذي نريده على جميع النصوص المقتبسة الموضوعة في وسم من هذا النوع.
+    في المثال التالي قمنا بعرض النص المقتبس باستخدام <code>&lt;q&gt;</code>  حتى يتم عرضه بين " ".
+    </pre>
+    <p>My teacher said: <q>HTML is not a programming language</q></p>
+    <h3 dir = "rtl">وضع إسم مختصر بدل الإسم الكامل: </h3>
+    <pre dir="rtl">
+        في البداية ما نقصده بإسم مختصر ( Abbreviation ) هو أنك على سبيل المثال تستطيع عرض كلمة واحدة مثل HTML و عند تمرير الفأرة فوقها يقوم المتصفح بإظهار الإسم الكامل Hyper Text Markup Language الذي هو اختصار لهذه الكلمة.
+        أردت وضع إسم مختصر فيمكنك وضعه بداخل <code>&lt;abbr&gt;</code> <code>&lt;/abbr&gt;</code>.
+
+        في المثال التالي قمنا بعرض إسم مختصر مع إظهار الجملة التي هو اختصار لها باستخدام <code>&lt; abbr title="" &gt;</code>.
+    </pre>
+    <p><abbr title= "Hyper Text Markup Language">HTML</abbr> is used to create web pages.</p>
+
+    <h3 dir="rtl">عرض معلومات الوصول و التواصل:</h3>
+    <pre dir ="rtl">
+    إذا أردت عرض معلومات الوصول أو التواصل فيمكنك وضع النص بداخل <code>&lt;address&gt;</code> <code>&lt;/address&gt;</code> و عندها سيعرضها المتصفح على سطر جديد و بشكل مائل.
+    معلومات الوصول كأن يضع الشخص موقعه الجغرافي مثال: "مكتب سالم المصري, شارع الإصلاح، مبنى السلام، الطابق الثاني".
+    معلومات التواصل كأن يضع الشخص رقم هاتفه، بريده الإلكتروني، صندوق البريد إلخ.. مثال: "هاتف: 061584984 - إيميل: info@harmash.com".
+
+    في المثال التالي قمنا بعرض معلومات الوصول لمكان صاحب الموقع باستخدام <code>&lt;address&gt;</code>.
+    </pre>
+    <address>9645 Al-islah street, Tripoli, 1300 - Lebanon</address>
+
+    <h3 dir="rtl">إبراز عنوان العمل:</h3>
+    <pre dir="rtl">
+        في حال أردت إبراز عنوان الشيء المهم الذي يتم عرضه يمكنك وضعه بداخل <code>&lt;cite&gt;</code> <code>&lt;/cite&gt;</code>.
+        عند وضع النص بداخل <code>&lt;cite&gt;</code> <code>&lt;/cite&gt;</code> فإن المتصفح في العادة يعرضه بشكل مائل.
+
+        في المثال التالي قمنا بإبراز عنوان الكتاب الذي تم ذكر الحديث منه باستخدام  <code>&lt;cite&gt;</code>.
+    </pre>
+    <p><cite>Riyadh-as-Saliheen</cite> by Imam Al-Nawawi, volume 1, hadith number 134</p>
+    
+    <hr>
+
+    
 </body>
 </html>
